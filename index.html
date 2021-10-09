@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/apikey.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <span class="navbar-brand mb-0 h1">Weather App</span>
+        <form class="form-inline form" name="searchForm">
+            <input class="form-control mr-sm-2" name="cityorzip" type="search" placeholder="Search City or Zip Code" area-label="Search">
+            <button type="submit" id="submitButton"class="btn btn-outline-success my-2 my-sm-0">Submit</button>
+        </form>
+    </nav>
+    <!-- Tab Link -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'today')" id=defaultOpen><strong>Now</strong></button>
+        <button class="tablinks" onclick="openTab(event, 'forecast')"><strong>Forecast</strong></button>
+    </div>
+    <div class="video-container">
+        <video autoplay loop playinline muted id="video-bg">
+            <source src="" id="video-source" type="video/mp4"/>
+        </video>
+    </div>
+    <!-- Tab Content -->
+    <div id="today" class="tabcontent">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4">
+                    <div class="card">
+                        <div class="weather">
+                            <div class="date"></div>
+                            <h2 class="city"></h2>
+                            <h3 class="temp"></h3>
+                            <div class="minmaxtemp"></div>
+                            <img src="" class="icon" id="weatherImg"/>
+                            <h5 class="description"></h5>
+                            <div class="humidity"></div>
+                            <div class="wind"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="forecast" class="tabcontent">
+        <div class="col-md-12" id="forecasttable">
+            <h3>5 Days Forecasting</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table" id="futuretable">
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
